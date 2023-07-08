@@ -1,0 +1,351 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  /*border: 1px solid;*/
+}
+
+:root {
+  --secondary: #ffffff;
+  --accent: #fcedda;
+  --primary: #282626;
+  --text: #595656;
+  --black: #000000;
+  --accent-two: #ee4e34;
+  --inter: "Inter", sans-serif;
+  --tilt: 'Tilt Prism', cursive;
+  --open-sans: "Open Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
+  --form-valid: #25d366;
+  --form-error: #f70000;
+  --form-good: orange;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary);
+  color: var(--accent);
+  font-family: var(--inter);
+  overflow-x: hidden;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-family: var(--inter);
+}
+
+h2 {
+  font-family: var(--inter);
+}
+
+p {
+  font-family: var(--inter);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: transparent;
+  outline: transparent;
+  border-radius: 0.5rem;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-family: var(--poppins);
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 2% 8%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 0rem;
+  margin-bottom: 10rem;
+}
+
+.logo {
+  width: 25%;
+}
+
+.logo > h1 {
+  display: inline;
+  position: relative;
+  transition: 500ms ease-in-out;
+}
+
+.logo > h1:hover::before {
+  height: 4rem;
+  left: -6rem;
+  bottom: -0.1rem;
+  width: 5rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.logo > h1:hover::after {
+  height: 4rem;
+  width: 5rem;
+  top: -0.4rem;
+  right: -6rem;
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.logo > h1::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--accent-two);
+  position: absolute;
+  bottom: -1rem;
+  left: -2rem;
+  z-index: -1;
+  transition: 500ms ease-in-out;
+}
+
+.logo > h1::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--accent-two);
+  transition: 500ms ease-in-out;
+  position: absolute;
+  top: -1rem;
+  right: -2rem;
+  z-index: -1;
+}
+
+.menu-links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-links > .link-wrap {
+  width: fit-content;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: 500ms ease-in-out;
+}
+
+.menu-links > .link-wrap > a {
+  font-size: 2rem;
+  transition: 500ms ease-in-out;
+  position: relative;
+}
+
+.menu-links > .link-wrap > a::before {
+  content: "";
+  width: 0%;
+  background-color: var(--accent);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  transition: 500ms ease-in-out;
+  visibility: hidden;
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+}
+
+.menu-links > .link-wrap:hover {
+  transform: translate(1.5rem, 0rem);
+}
+
+.menu-links > .link-wrap:hover > a::before {
+  width: 52%;
+  visibility: visible;
+}
+
+.menu-links > .link-wrap > a::after {
+  content: "";
+  width: 0%;
+  background-color: var(--accent);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  transition: 500ms ease-in-out;
+  visibility: hidden;
+  position: absolute;
+  bottom: -0.3rem;
+  right: 0;
+}
+
+.menu-links > .link-wrap:hover > a::after {
+  width: 52%;
+  visibility: visible;
+}
+
+.menu-links > .link-wrap:hover > a {
+  color: var(--accent-two);
+}
+
+.bg-switch {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.light {
+  background-color: var(--primary);
+  border-radius: 100%;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: 500ms ease-in-out;
+}
+
+.light:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.light:hover::before {
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  top: -1rem;
+  left: -2rem;
+  background-color: var(--accent);
+}
+
+.light:hover::after {
+  width: 1rem;
+  height: 1rem;
+  padding: 1rem;
+  top: -1rem;
+  right: -2rem;
+  background-color: var(--accent);
+}
+
+.light::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--accent-two);
+  position: absolute;
+  top: -0.5rem;
+  left: -1rem;
+  transition: 500ms ease-in-out;
+  z-index: -1;
+}
+
+.light::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--accent-two);
+  position: absolute;
+  transition: 500ms ease-in-out;
+  top: -0.5rem;
+  right: -1rem;
+  z-index: -1;
+}
+
+.switch-border {
+  background: linear-gradient(45deg, var(--accent-two), var(--accent));
+  border-radius: 100%;
+  padding: 3.05rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: 500ms ease-in-out;
+  position: absolute;
+  top: -0.38rem;
+  left: -0.33rem;
+  z-index: -1;
+  transition: 500ms ease-in-out;
+}
+
+.light:hover > .switch-border {
+  background: var(--accent-two);
+}
+
+/*home*/
+#home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-profession {
+  width: 100%;
+}
+
+.home-profession > h1 {
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.home-profession > h1 > img {
+  display: inline;
+  width: 7.4rem;
+  height: 7.4rem;
+}
+
+.border-bottom {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--accent); 
+}
+
+.tilt {
+  font-family: var(--tilt);
+}
+
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Tilt Prism', cursive;
+*/
