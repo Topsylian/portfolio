@@ -7,7 +7,7 @@
   border: none;
   list-style-type: none;
   scroll-behavior: smooth;
-  /*border: 1px solid;*/
+  border: 1px solid;
 }
 
 :root {
@@ -68,19 +68,7 @@ img {
 }
 
 button {
-  width: 40%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border: transparent;
-  outline: transparent;
-  border-radius: 0.5rem;
-  background-color: var(--accent);
-  color: var(--primary);
-  font-family: var(--poppins);
+  display: block;
 }
 
 main {
@@ -318,6 +306,9 @@ header {
 
 .home-profession {
   width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .home-profession > h1 {
@@ -342,6 +333,63 @@ header {
   font-family: var(--tilt);
 }
 
+/*home name*/
+.home-name {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-name > h1 {
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+/*the spans inside of the name information design*/
+.home-name-info {
+  margin-bottom: 5rem
+}
+
+.home-name-info > span {
+  color: var(--accent-two);
+}
+
+/*home link*/
+.home-link > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  font-weight: 600;
+  color: var(--accent-two);
+}
+
+.home-link > a > span {
+  font-weight: 600;
+}
+
+.download-cv {
+  display: flex;
+}
+
+.download-cv > a {
+  width: 25rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: transparent;
+  outline: transparent;
+  border-radius: 0.5rem;
+  background-color: var(--accent-two);
+  color: var(--accent);
+  font-family: var(--poppins);
+}
 
 /*
 font-family: 'Inter', sans-serif;
